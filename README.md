@@ -18,7 +18,7 @@ Testify is an AI-driven automated pentesting tool designed to streamline vulnera
 
 ## Architecture
 
-![Hack drawio](https://github.com/user-attachments/assets/c4a5386a-7ef9-4f8f-9d32-0ccfe8397515)
+![Hack drawio(1)](https://github.com/user-attachments/assets/839f9a18-b6a5-4b3d-b87d-8719c8b0724b)
 
 ![image](https://github.com/user-attachments/assets/4a6c8f08-2c8f-4b43-9d37-c5839b9ff091)
 
