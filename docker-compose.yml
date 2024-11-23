@@ -1,16 +1,18 @@
 version: '3.8'
 
 services:
-  nginx:
+  # nginx:
+  #   build:
+  #     context: ./nginx
+  #   ports:
+  #     - "8080:80"
+  #   depends_on:
+  #     - frontend
+
+  frontend:
     build:
-      context: ./nginx
+      context: ./frontend
     ports:
       - "8080:80"
-    depends_on:
-      - scrapper-microservice
-
-  scrapper-microservice:
-    build:
-      context: ./scrapper-microservice
-    ports:
-      - "4000:4000"
+    environment:
+      NODE_ENV: production
