@@ -73,11 +73,12 @@ Please provide a corrected version of the code. Provide code and only code. Do n
 
 @app.post("/execute")
 def execute_code(requests: List[CodeRequest]):
+    retries = os.getenv("CODE_FIX_RETRIES") or 2
     results = []
     for req in requests:
         # First attempt to execute the code
         success, output = execute_python_code(req.code)
-        if not success:
+        if not success and retries != 0:
             # If execution fails, ask AI to fix the code
             print("Attempt to fix code with ChatGPT!")
             fixed_code = fix_code_with_ai(req.code, output)
@@ -88,6 +89,7 @@ def execute_code(requests: List[CodeRequest]):
                 'output': output,
                 'attempts': 2
             })
+            retries -=  1
         else:
             results.append({
                 'id': req.id,
