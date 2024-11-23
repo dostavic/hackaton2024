@@ -1,4 +1,7 @@
 # Testify
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/84f77807-ac2c-4a50-956c-7fb1594893ca" alt="LOGO" height="200">
+</p>
 Testify is an AI-driven automated pentesting tool designed to streamline vulnerability validation and exploit generation. Built as a modular application composed of microservices, it empowers security teams to identify and confirm exploitable issues in web applications with minimal manual effort.
 
 ## Functionality
