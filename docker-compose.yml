@@ -1,18 +1,37 @@
 version: '3.8'
 
 services:
-  # nginx:
-  #   build:
-  #     context: ./nginx
-  #   ports:
-  #     - "8080:80"
-  #   depends_on:
-  #     - frontend
+  nginx:
+    image: nginx:1.27.2
+    ports:
+      - "8080:80"
+    depends_on:
+      - rag-microservice
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - app-network
 
   frontend:
     build:
       context: ./frontend
     ports:
-      - "8080:80"
+      - "3000:80"
     environment:
       NODE_ENV: production
+    depends_on:
+      - rag-microservice
+    networks:
+      - app-network
+
+  rag-microservice:
+    build:
+      context: ./rag-microservice
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
