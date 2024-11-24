@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 COPY app.py /app/app.py
 
 WORKDIR /app
-
+EXPOSE 5000
 CMD ["sh", "-c", "/opt/zap/zap.sh -daemon -port 8080 -config api.disablekey=true & python app.py"]

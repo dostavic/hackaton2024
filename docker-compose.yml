@@ -29,6 +29,16 @@ services:
       context: ./rag-microservice
     ports:
       - "5000:5000"
+    depends_on:
+      - zap-microservice
+    networks:
+      - app-network
+
+  zap-microservice:
+    build:
+      context: ./zap-microservice
+    ports:
+      - "5001:5001"
     networks:
       - app-network
 
