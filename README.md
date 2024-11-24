@@ -19,8 +19,10 @@ Testify is an AI-driven automated pentesting tool designed to streamline vulnera
 ```docker-compose up --build```
 ## Architecture
 
+![image](https://github.com/user-attachments/assets/4d570406-ba57-45e5-aa38-6d9be76f9ea6)
+
+
 ![Hack drawio(1)](https://github.com/user-attachments/assets/839f9a18-b6a5-4b3d-b87d-8719c8b0724b)
 
-![image](https://github.com/user-attachments/assets/4d570406-ba57-45e5-aa38-6d9be76f9ea6)
 
 
