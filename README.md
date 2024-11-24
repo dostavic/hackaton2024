@@ -15,7 +15,8 @@ Testify is an AI-driven automated pentesting tool designed to streamline vulnera
 **Proof-of-Exploit Generation**: Captures evidence of successful exploitation, such as screenshots for XSS or altered server responses for SQLi.
 
 **Ease of Deployment**: Comes with a **Docker Compose** setup for seamless deployment, integrating **Nginx** for routing and load balancing.
-
+## How to start
+```docker-compose up --build```
 ## Architecture
 
 ![Hack drawio(1)](https://github.com/user-attachments/assets/839f9a18-b6a5-4b3d-b87d-8719c8b0724b)
